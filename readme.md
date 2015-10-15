@@ -15,7 +15,11 @@ To get going open terminal and type in the following things
 
 `npm run watch`
 
+(where `my-new-webpage` is the name of your new web page)
+
 By default HTML is _index.html_, styles in _style.css_ and you can write Node style Common JS modules in the _source_ directory.
+
+
 
 ##What do you get
 Some decent default CSS
