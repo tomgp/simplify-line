@@ -22,7 +22,7 @@ By default HTML is _index.html_, styles in _style.css_ and you can write Node st
 
 
 ##What do you get
-Some decent default CSS
+Some halfway decent default CSS ([for examle](http://www.toffeemilkshake.co.uk/starter-kit/))
 
 Bundles Javascript using require('the-module-name') type syntax ([browserify](http://browserify.org/))
 
