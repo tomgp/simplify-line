@@ -7,7 +7,7 @@ NodeJS, Git
 ##How you use it
 To get going open terminal and type in the following things
 
-`git clone my-new-webpage`
+`git clone https://github.com/tomgp/starter-kit.git my-new-webpage`
 
 `cd my-new-webpage`
 
