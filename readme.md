@@ -6,6 +6,7 @@ NodeJS, Git
 
 ##How you use it
 To get going open terminal and type in the following things
+
 `git clone my-new-webpage`
 
 `cd my-new-webpage`
