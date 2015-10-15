@@ -1,13 +1,17 @@
 ##What it is
-A quick start for making static websites. To get going open terminal and type in the following things
+A quick start for making static websites. 
 
 ##What you need
 NodeJS, Git
 
 ##How you use it
+To get going open terminal and type in the following things
 `git clone my-new-webpage`
+
 `cd my-new-webpage`
+
 `npm install`
+
 `npm run watch`
 
 By default HTML is _index.html_, styles in _style.css_ and you can write Node style Common JS modules in the _source_ directory.
