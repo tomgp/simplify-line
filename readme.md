@@ -2,7 +2,7 @@
 A quick start for making static websites. 
 
 ##What you need
-NodeJS, Git
+[NodeJS](https://nodejs.org/), [Git](https://help.github.com/articles/set-up-git/)
 
 ##How you use it
 To get going open terminal and type in the following things
@@ -24,10 +24,10 @@ By default HTML is _index.html_, styles in _style.css_ and you can write Node st
 ##What do you get
 Some decent default CSS
 
-Bundles Javascript using require('the-module-name') type syntax (browserify)
+Bundles Javascript using require('the-module-name') type syntax ([browserify](http://browserify.org/))
 
-Re-builds the JS bundle on changes (watchify)
+Re-builds the JS bundle on changes ([watchify](https://www.npmjs.com/package/watchify))
 
-Local live reloading webserver (srvlr)
+Local live reloading webserver ([srvlr](https://github.com/kavanagh/srvlr))
 
-ES6 pollyfils (babelify)
+ES6 pollyfils ([babelify](https://github.com/babel/babelify))
