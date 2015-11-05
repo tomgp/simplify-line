@@ -18,12 +18,19 @@ ES6 pollyfils ([babelify](https://github.com/babel/babelify))
 ##How you use it
 To get going open terminal and type in the following things
 
+clone the repo:
 `git clone https://github.com/tomgp/starter-kit.git my-new-webpage`
 
+go to the new thing you made:
 `cd my-new-webpage`
 
+point it to a new remote i.e. you may wish to use your own github account or something:
+`git remote set-url origin https://github.com/yourusername/my-new-webpage.git`
+
+get all the js stuff:
 `npm install`
 
+run a live reloading server and somehting to build the javascript:
 `npm run watch`
 
 (where `my-new-webpage` is the name of your new web page)
