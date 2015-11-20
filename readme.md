@@ -34,7 +34,9 @@ get all the js stuff:
 
 `npm install`
 
-run a live reloading server and somehting to build the javascript:
+(if you want other modules, eg. 'd3' you can install them as usual `npm install --save d3`)
+
+run a live reloading server and something to build the javascript:
 
 `npm run watch`
 
