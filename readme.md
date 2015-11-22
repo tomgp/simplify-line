@@ -2,7 +2,8 @@
 A quick start for making static websites. 
 
 ##What you need
-[NodeJS](https://nodejs.org/), [Git](https://help.github.com/articles/set-up-git/)
+[NodeJS](https://nodejs.org/) for bundling JS, [Git](https://help.github.com/articles/set-up-git/)
+[Python](https://www.python.org) for a simple http server (temporarily until I find somethignin node that fits the bill)
 
 ##What do you get
 Some halfway decent default CSS ([for examle](http://www.toffeemilkshake.co.uk/starter-kit/))

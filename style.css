@@ -4,7 +4,7 @@ body {
 	width: 87.5%;
 	margin-left: auto;
 	margin-right: auto;
-	font-family: sans-serif;
+	font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", sans-serif, "Helvetica Neue", "Lucida Grande";
 	color: #111;
 	max-width: 1400px;
 }
