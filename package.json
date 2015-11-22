@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
   	"watch": "watchify ./source/main.js -o ./bundle.js",
-    "serve": "python SimpleHTTPServer -m",
+    "serve": "python -m SimpleHTTPServer",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "tom.g.pearson@gmail.com",
