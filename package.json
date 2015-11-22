@@ -4,7 +4,8 @@
   "description": "A quick start for developing client side stuff using ES6 with polyfills etc.",
   "main": "index.js",
   "scripts": {
-  	"watch": "watchify ./source/main.js -o ./bundle.js | node ./node_modules/srvlr/index.js",
+  	"watch": "watchify ./source/main.js -o ./bundle.js",
+    "serve": "python SimpleHTTPServer -m",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "tom.g.pearson@gmail.com",
@@ -12,7 +13,6 @@
   "devDependencies": {
     "babelify": "^6.3.0",
     "browserify": "^11.2.0",
-    "srvlr": "^0.5.0",
     "watchify": "^3.4.0"
   }
 }
