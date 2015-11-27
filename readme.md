@@ -39,7 +39,7 @@ get all the js stuff:
 
 run a live reloading server and something to build the javascript:
 
-`npm run watch`
+`npm run start`
 
 (where `my-new-webpage` is the name of your new web page)
 
