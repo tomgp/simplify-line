@@ -35,7 +35,8 @@ var simple = simplePath()
 	.x(function(d){ return dateScale(d.date); })
 	.y(function(d){ return valueScale(d.value); })
 		</pre>
-		<p>Based on <a href="http://mourner.github.io/simplify-js/">Simplify.js</a> a tiny high-performance JavaScript polyline simplification library by Vladimir Agafonkin, extracted from Leaflet, a JS interactive maps library of the same author. It uses a combination of Douglas-Peucker and Radial Distance algorithms.</p>
+		<p>Based on <a href="http://mourner.github.io/simplify-js/">Simplify.js</a> a tiny high-performance JavaScript polyline simplification library by Vladimir Agafonkin, extracted from Leaflet, a JS interactive maps library by the same author. </p>
+		<p>It uses a combination of <a href="https://en.wikipedia.org/wiki/Ramer–Douglas–Peucker_algorithm">Ramer-Douglas-Peucker</a> and <a href="http://psimpl.sourceforge.net/radial-distance.html">Radial Distance</a> algorithms.</p>
 	</section>
 	<section><a href="https://github.com/tomgp/simplify-line/">Source code is on GitHub</a></section>
   </article>
