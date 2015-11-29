@@ -14,3 +14,4 @@ Based on Simplify.js a tiny high-performance JavaScript polyline simplification 
 
 It uses a combination of Douglas-Peucker and Radial Distance algorithms.
 
+The reusable code is in [simplified-path.js](https://github.com/tomgp/simplify-line/blob/master/source/simplified-path.js). At the moment I'm using browserify (i.e. `require('module')` type thing )
