@@ -3,30 +3,39 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>TGP Starter kit</title>
+	<title>Line simplification</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="bundle.js"></script>
+	<style>
+		.original{
+			color:#F99;
+		}
+		input#tolerance-input{
+			width:50%;
+		}
+	</style>
 </head>
 <body>
 <article>
-    <h1>Starter Kit</h1>
-    <p class="subtitle">Tom Pearson October 2015</p>
-    <section>
-    	<p>A quick start for making static websites (<a href="https://github.com/tomgp/starter-kit/">hosted on GitHub</a>). To get going open terminal and type in the following things </p>
-    	<pre>git clone https://github.com/tomgp/starter-kit.git my-new-webpage</pre>
-    	<pre>cd my-new-webpage</pre>
-    	<pre>npm install</pre>
-    	<pre>npm run watch</pre>
-    	<p>By default HTML is <i>index.html</i>, styles in <i>style.css</i> and you can write <a href="https://nodejs.org/docs/latest/api/modules.html#modules_modules">Node style JS modules</a> in the <i>source</i> directory.
-    </section>
-    <section>
-		<h2>What do you get</h2>
-		<p>Some decent default CSS (what you're looking at)</p>
-		<p>Bundles Javascript using require('the-module-name') type syntax (<a href="http://browserify.org/">browserify</a>)</p>
-		<p>Re-builds the JS bundle on changes (<a href="https://www.npmjs.com/package/watchify">watchify</a>)</p>
-		<p>Local live reloading webserver (<a href="https://www.npmjs.com/package/srvlr">srvlr</a>)</p>
-		<p>ES6 pollyfils (<a href="https://www.npmjs.com/package/srvlr">babelify</a>)</p>
-		</p>
+    <h1>Line simplification</h1>
+    <p class="subtitle"><a href="http://www.twitter.com/tomp">Tom Pearson</a> November 2015</p>
+    <p class="simplified key">Simplified data</p> <p class="original key">Original data</p>
+    <section class="chart">
+    	
+	</section>
+	<section class="ui">
+	<p>Tolerance: <input type="range" min="0" max="5" step="0.1" value="3" name="tolerance" id="tolerance-input"> <span id="tolerance-value">3</span></p>
+	</section>
+	<section>
+		<p>A simplified path generator for D3, a drop in replacement for <a href="https://github.com/mbostock/d3/wiki/SVG-Shapes#line">d3.svg.line</a> with the added ability to specify a <i>tolerance</i>.</p>
+		<p>In the case above:</p>
+		<pre>
+var simple = simplePath()
+	.tolerance(3)
+	.x(function(d){ return dateScale(d.date); })
+	.y(function(d){ return valueScale(d.value); })
+		</pre>
+		<p>Based on <a href="http://mourner.github.io/simplify-js/">Simplify.js</a> a tiny high-performance JavaScript polyline simplification library by Vladimir Agafonkin, extracted from Leaflet, a JS interactive maps library of the same author. It uses a combination of Douglas-Peucker and Radial Distance algorithms.</p>
 	</section>
   </article>
 </body>

@@ -1,49 +1,16 @@
 ##What it is
-A quick start for making static websites. 
+A simplified path generator for D3, a drop in replacement for d3.svg.line with the added ability to specify a tolerance.
 
-##What you need
-[NodeJS](https://nodejs.org/) for bundling JS, [Git](https://help.github.com/articles/set-up-git/)
-[Python](https://www.python.org) for a simple http server (temporarily until I find somethignin node that fits the bill)
+eg:
 
-##What do you get
-Some halfway decent default CSS ([for examle](http://www.toffeemilkshake.co.uk/starter-kit/))
+```
+var simple = simplePath()
+	.tolerance(3)
+	.x(function(d){ return dateScale(d.date); })
+	.y(function(d){ return valueScale(d.value); })
+```
+	
+Based on Simplify.js a tiny high-performance JavaScript polyline simplification library by Vladimir Agafonkin, extracted from Leaflet, a JS interactive maps library by the same author. 
 
-Bundles Javascript using `require('the-module-name')` type syntax ([browserify](http://browserify.org/))
-
-Re-builds the JS bundle on changes ([watchify](https://www.npmjs.com/package/watchify))
-
-Local live reloading webserver ([srvlr](https://github.com/kavanagh/srvlr))
-
-ES6 pollyfils ([babelify](https://github.com/babel/babelify))
-
-##How you use it
-To get going open terminal and type in the following things
-
-clone the repo:
-
-`git clone https://github.com/tomgp/starter-kit.git my-new-webpage`
-
-go to the new thing you made:
-
-`cd my-new-webpage`
-
-point it to a new remote i.e. you may wish to use your own github account or something:
-
-`git remote set-url origin https://github.com/yourusername/my-new-webpage.git`
-
-get all the js stuff:
-
-`npm install`
-
-(if you want other modules, eg. 'd3' you can install them as usual `npm install --save d3`)
-
-run a live reloading server and something to build the javascript:
-
-`npm run start`
-
-(where `my-new-webpage` is the name of your new web page)
-
-By default HTML is _index.html_, styles in _style.css_ and you can write Node style Common JS modules in the _source_ directory.
-
-
+It uses a combination of Douglas-Peucker and Radial Distance algorithms.
 
