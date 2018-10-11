@@ -17,9 +17,27 @@ window.onload = function() {
   const interactive = select('.interactive').append('div');
 	// add the basic markup  structure
 	
-	interactive.append('div').attr('class','key'); // key
+	interactive.append('div').attr('class','key simplified'); // key
+	interactive.append('div').attr('class','key original');
 	interactive.append('div').attr('class','chart'); // display-chart
-	interactive.append('div').attr('class','ui'); // ui slider
+	interactive.append('div')
+		.attr('class','ui')
+		.call(parent=>{
+			parent.append('span')
+				.text('Tolerance:');
+
+			parent.append('input')
+				.attr('type','range')
+				.attr('min',0)
+				.attr('max',5)
+				.attr('step',0.1)
+				.attr('value',3)
+				.attr('name','tolerance')
+				.attr('id','tolerance-input');
+			
+			parent.append('span').attr('id','tolerance-display');
+			
+		}); // ui slider
 	select('div.message').remove();
 
 csv('bonds.csv')
@@ -61,16 +79,17 @@ csv('bonds.csv')
 			.attr('stroke', '#F99');
 
 		const draw = (tolerance)=>{
+			tolerance = Number(tolerance);
 			// TODO update tolerance display label
-
+			select('#tolerance-display').text(tolerance);
 			simple.tolerance(tolerance);
-
+			
 			plot.selectAll('path.simple').data([data])
 				.enter().append('path').classed('simple', true)
-
+			
 			plot.selectAll('path.simple')
 				.attr('d', simple)
-				.attr('fill', none)
+				.attr('fill', 'none')
 				.attr('stroke', '#000');
 
 			const report = simple.report();
@@ -94,19 +113,12 @@ csv('bonds.csv')
 					parent.text((d) => `${d.label} (${d.value} points)`);
 					parent.classed((d)=>d['class'], true);
 				});
-		}			
+		};
+
+		var slider = select('#tolerance-input');
+		slider.on('change', ()=>draw( slider.node().value ));
+
+		draw( slider.node().value );
 	});
 };
-
-
-
-// 	var slider = d3.select('#tolerance-input');
-// 	slider.on('change', function(){
-// 		draw( slider.node().value );	
-// 	})
-// 	draw( slider.node().value );
-
-	
-
-// });
 

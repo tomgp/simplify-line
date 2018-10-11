@@ -1,5 +1,5 @@
 import { line } from 'd3';
-import { simplify } from 'simplify-js';
+const simplify = require('simplify-js');
 
 const functor = (x)=>{
     const constant = (x) => (()=>x);
@@ -23,14 +23,13 @@ function simplifiedLine(){
     let simplifiedPoints = 0;
 
 	const lineGenerator = (data)=>{
-		var normalised = data.map(function(d){	//get the data into the form simplify-js expects
+		const normalised = data.map(function(d){	//get the data into the form simplify-js expects
 			return {
 				x: xAccessor(d),
 				y: yAccessor(d)
 			};
-		});	
-		var simplifiedData = simplify(normalised, tolerance, highQuality);
-        
+        });	
+		const simplifiedData = simplify(normalised, tolerance, highQuality);
         simplifiedPoints = simplifiedData.length;
         originalPoints = data.length;
         
