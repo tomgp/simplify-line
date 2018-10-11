@@ -1,20 +1,30 @@
 {
-  "name": "tgp-starter-kit",
-  "version": "1.0.0",
-  "description": "A quick start for developing client side stuff using ES6 with polyfills etc.",
+  "name": "@tomgp/line-simplification",
+  "version": "2.0.0",
+  "description": "Simplify a line: a drop in replacement for d3.line",
   "main": "index.js",
   "scripts": {
-    "start": "watchify ./source/main.js -o ./bundle.js | node ./node_modules/srvlr/index.js",
-    "watch": "watchify ./source/main.js -o ./bundle.js",
-    "serve": "python -m SimpleHTTPServer",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js",
+    "build": "npx webpack --entry ./examples/index.js -o ./examples/bundle.js -w",
+    "serve": "npx browser-sync start --serveStatic ./examples -w -f ./examples/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomgp/line-simplification.git"
   },
   "author": "tom.g.pearson@gmail.com",
   "license": "ISC",
+  "resolutions": {
+    "eslint-scope": "3.7.1"
+  },
   "devDependencies": {
-    "babelify": "^6.3.0",
-    "browserify": "^11.2.0",
-    "watchify": "^3.4.0",
-    "srvlr": "^0.5.0"
+    "browser-sync": "^2.24.5",
+    "d3": "^5.5.0",
+    "rollup": "^0.62.0",
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8"
+  },
+  "dependencies": {
+    "simplify-js": "^1.2.3"
   }
 }
