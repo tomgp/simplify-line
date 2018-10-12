@@ -1,6 +1,6 @@
 {
   "name": "@tomgp/line-simplification",
-  "version": "2.0.0",
+  "version": "0.1.0",
   "description": "Simplify a line: a drop in replacement for d3.line",
   "main": "index.js",
   "scripts": {
