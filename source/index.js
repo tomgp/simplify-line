@@ -1,4 +1,4 @@
-import { line } from 'd3';
+const { line } = require('d3');
 const simplify = require('simplify-js');
 
 const functor = (x)=>{
@@ -77,4 +77,4 @@ function simplifiedLine(){
 	return lineGenerator;
 }
 
-export { simplifiedLine };
+module.exports = { simplifiedLine };
