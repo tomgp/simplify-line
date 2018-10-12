@@ -1,10 +1,15 @@
-##What it is
-A simplified path generator for D3, a drop in replacement for d3.svg.line with the added ability to specify a tolerance.
+## What it is?
 
-eg:
+A simplified path generator for D3, more or less a drop in replacement for d3.line with the added ability to specify a tolerance.
+
+## Usage
+
+Install and use via npm `npm install --save @tomgp/simplify-line` 
 
 ```
-var simple = simplePath()
+const { simplifiedLine } = require('simplify-line');
+
+const simple = simplePath()
 	.tolerance(3)
 	.x(function(d){ return dateScale(d.date); })
 	.y(function(d){ return valueScale(d.value); })
@@ -14,4 +19,3 @@ Based on Simplify.js a tiny high-performance JavaScript polyline simplification 
 
 It uses a combination of Douglas-Peucker and Radial Distance algorithms.
 
-The reusable code is in [simplified-path.js](https://github.com/tomgp/simplify-line/blob/master/source/simplified-path.js). At the moment I'm using browserify (i.e. `require('module')` type thing )
