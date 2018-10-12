@@ -1,6 +1,6 @@
 {
   "name": "@tomgp/line-simplification",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simplify a line: a drop in replacement for d3.line",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tomgp/line-simplification.git"
+    "url": "https://github.com/tomgp/simplify-line.git"
   },
   "author": "tom.g.pearson@gmail.com",
   "license": "ISC",
