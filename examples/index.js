@@ -8,7 +8,7 @@ import {
 	extent
 } from 'd3';
 
-import { simplifiedLine } from '../source';
+import { simplifiedLine } from '..';
 
 window.onload = function() {
 	const width = 500;
