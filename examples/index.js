@@ -17,11 +17,16 @@ window.onload = function() {
   const interactive = select('.interactive').append('div');
 	// add the basic markup  structure
 	
-	interactive.append('div').attr('class','key simplified'); // key
-	interactive.append('div').attr('class','key original');
-	interactive.append('div').attr('class','chart'); // display-chart
+	interactive.append('div')
+		.attr('class','key simplified'); // key
+	interactive.append('div')
+		.attr('class','key original')
+		.style('color','#F99');
+	interactive.append('div')
+		.attr('class','chart'); // display-chart
 	interactive.append('div')
 		.attr('class','ui')
+		.style('width','100%')
 		.call(parent=>{
 			parent.append('span')
 				.text('Tolerance:');
@@ -111,7 +116,6 @@ csv('bonds.csv')
 				.data( keyData )
 				.call((parent)=>{
 					parent.text((d) => `${d.label} (${d.value} points)`);
-					parent.classed((d)=>d['class'], true);
 				});
 		};
 

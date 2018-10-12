@@ -28,7 +28,8 @@ function simplifiedLine(){
 				x: xAccessor(d),
 				y: yAccessor(d)
 			};
-        });	
+		});
+
 		const simplifiedData = simplify(normalised, tolerance, highQuality);
         simplifiedPoints = simplifiedData.length;
         originalPoints = data.length;
