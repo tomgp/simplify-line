@@ -45,7 +45,9 @@ window.onload = function() {
 		}); // ui slider
 	select('div.message').remove();
 
-csv('bonds.csv')
+	console.log(select('.interactive').node().dataset.source)
+
+csv(select('.interactive').node().dataset.source)
 	.then(result => {
 		const parseTimeString = timeParse('%Y-%m-%d');
 		// a bit of preliminary processing...
