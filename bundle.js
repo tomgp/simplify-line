@@ -14121,7 +14121,9 @@ d3.csv('bonds.csv', function(data){
 		.attr({
 			'd':original,
 			'fill':'none',
-			'stroke':'#F99'
+      'stroke':'#ff2800',
+      'stroke-width':2,
+      'stroke-opacity':0.5,
 		});
 
 	function draw(tolerance){
@@ -14134,7 +14136,7 @@ d3.csv('bonds.csv', function(data){
 		plot.selectAll('path.simple').attr({
 				'd':simple,
 				'fill':'none',
-				'stroke':'#000'
+				'stroke':'#0028ff'
 			});
 
 		var report = simple.report();
