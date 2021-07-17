@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="simplify lines on D3 charts, remove points minimising information loss">
 	<title>Line simplification</title>
 	<link rel="stylesheet" type="text/css" href="https://www.toffeemilkshake.co.uk/css/home.css">
 
@@ -31,7 +32,7 @@
 	<p>Tolerance: <input type="range" min="0" max="5" step="0.1" value="3" name="tolerance" id="tolerance-input"> <span id="tolerance-value">3</span></p>
 	</section>
 	<section>
-		<p>A simplified path generator for D3, a drop in replacement for <a href="https://github.com/mbostock/d3/wiki/SVG-Shapes#line">d3.svg.line</a> with the added ability to specify a <i>tolerance</i>.</p>
+		<p>A simplified path generator for D3. Remove points without losing much information. A drop in replacement for <a href="https://github.com/mbostock/d3/wiki/SVG-Shapes#line">d3.svg.line</a> with the added ability to specify a <i>tolerance</i>.</p>
 		<p>In the case above:</p>
 		<pre>
 var simple = simplePath()
