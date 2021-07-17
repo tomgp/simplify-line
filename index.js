@@ -68,12 +68,12 @@ function simplifiedLine(){
 		return lineGenerator;
 	};
 
-    lineGenerator.report = ()=>{ // reports the difference in the number of points in the original line and the simplified
-        return {
-            original: originalPoints,
-            simplified: simplifiedPoints
-        };
-    }
+	lineGenerator.report = ()=>{ // reports the difference in the number of points in the original line and the simplified
+			return {
+					original: originalPoints,
+					simplified: simplifiedPoints
+			};
+	}
 
 	return lineGenerator;
 }

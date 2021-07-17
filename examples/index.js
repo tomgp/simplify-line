@@ -14,9 +14,9 @@ window.onload = function() {
   const width = 500;
   const height = 300;
   const margin = { top:20, left:20, bottom:20, right:20 };
-  const interactive = select('.interactive').append('div');
+  const interactive = select('.interactive')
+		.append('div');
 	// add the basic markup  structure
-	
 	interactive.append('div')
 		.attr('class','key simplified'); // key
 	interactive.append('div')
@@ -45,9 +45,8 @@ window.onload = function() {
 		}); // ui slider
 	select('div.message').remove();
 
-	console.log(select('.interactive').node().dataset.source)
 
-csv(select('.interactive').node().dataset.source)
+csv('examples/bonds.csv')
 	.then(result => {
 		const parseTimeString = timeParse('%Y-%m-%d');
 		// a bit of preliminary processing...
@@ -100,7 +99,7 @@ csv(select('.interactive').node().dataset.source)
 				.attr('stroke', '#000');
 
 			const report = simple.report();
-			
+			console.log(3)
 			const keyData = [
 				{
 					'label': 'Simplified data',
